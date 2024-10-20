@@ -184,7 +184,7 @@ export default function App() {
             );
           })}
         </div>
-        <div id="projects " className="my-4 scroll-mt-[132px]">
+        <div id="projects" className="my-4 scroll-mt-[132px]">
           <h1 className="text-xl font-bold pb-2">Projects</h1>
           {projects.map((e, i) => {
             return (
