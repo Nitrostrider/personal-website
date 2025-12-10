@@ -4,7 +4,7 @@ Follow instructions here:
 https://cets.seas.upenn.edu/answers/public_html.html  
 https://cets.seas.upenn.edu/answers/filetransfer.html
 
-Activate VPN
+Activate VPN, connect to vpn.upenn.edu
 
 ```npm run dev```
 
