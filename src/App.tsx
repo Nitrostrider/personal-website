@@ -38,7 +38,7 @@ const experience = [
   {
     company: "BAE Systems, Inc.",
     role: "Software Engineer Intern - Ground Software",
-    date: "Jun 2025 - October 2025",
+    date: "June 2025 - October 2025",
     location: "Broomfield, CO"
   },
   {
@@ -57,13 +57,13 @@ const experience = [
   {
     company: "University of Pennsylvania Perelman School of Medicine",
     role: "Research Intern",
-    date: "May 2024 - Present",
+    date: "May 2024 - April 2025",
     location: "Philadelphia, PA",
   },
   {
     company: "The Daily Pennsylvanian",
     role: "Analytics Engineer",
-    date: "January 2024 - Present",
+    date: "January 2024 - January 2025",
     project: "DP Dashboard",
     location: "Philadelphia, PA",
   },

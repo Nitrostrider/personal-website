@@ -6,6 +6,8 @@ https://cets.seas.upenn.edu/answers/filetransfer.html
 
 Activate VPN
 
+```npm run dev```
+
 ```npm run build```
 
 ```ssh maxwelly@eniac.seas.upen.edu```
