@@ -1,4 +1,4 @@
-import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaEnvelope, FaGithub, FaLink, FaLinkedin } from "react-icons/fa";
 import profilepic from "./assets/profile_pic.jpg";
 import { SiDevpost } from "react-icons/si";
 import sciovirtualImage from "./assets/sciovirtual.png";
@@ -11,6 +11,10 @@ import ultrasoundAppImage from "./assets/ultrasound_app.png";
 import sp_dashboardImage from "./assets/spdashboard_demo.png";
 import dp_dashboardImage from "./assets/dp_dashboard.png";
 import verogo_dashboardImage from "./assets/verogo_dashboard.png";
+import bridgecaer_websiteImage from "./assets/bridgecaer_website.png";
+import nearbnbImage from "./assets/nearbnb.png";
+import chessGameImage from "./assets/chessGame.png";
+
 import { Slide } from "react-slideshow-image";
 
 const icons = [
@@ -32,9 +36,21 @@ const icons = [
 ];
 const experience = [
   {
+    company: "BAE Systems, Inc.",
+    role: "Software Engineer Intern - Ground Software",
+    date: "Jun 2025 - October 2025",
+    location: "Broomfield, CO"
+  },
+  {
+    company: "University of Pennsylvania",
+    role: "Teaching Assistant, CIS 5500: Database and Information Systems",
+    date: "August 2025 - Present",
+    location: "Philadelphia, PA",
+  },
+  {
     company: "Vero Electric",
     role: "Software Developer",
-    date: "May 2024 - Present",
+    date: "May 2024 - June 2025",
     project: "Vero Go Dashboard",
     location: "Philadelphia, PA"
   },
@@ -68,10 +84,35 @@ const experience = [
 ];
 const projects = [
   {
+    name: "BridgeCaER",
+    description:
+      "Healthcare/software startup in the works, and I'm a founding engineer. Checkout our website for more information about our product!",
+    date: "March 2025 - Present",
+    stack: ["AWS", "React", "TypeScript", "Python", "SQL"],
+    image: [bridgecaer_websiteImage],
+    link: [
+      {
+        icon: <FaLink size={14} />,
+        isIcon: true,
+        href: "https://www.bridgecaer.org/",
+        name: "bridgecaer.org",
+      },
+    ]
+  },
+  {
+    name: "NearBnb",
+    description:
+    "Website to find the best Airbnb based on nearby amentities. Uses Postgres RDS and Typescript, as the final project for CIS 5500.",
+    date: "May 2025",
+    stack: ["AWS", "React", "Python", "SQL"],
+    image: [nearbnbImage],
+    link: [],
+  },
+  {
     name: "Vero Go Dashboard",
     description:
       "Dashboard for customers with user authentication, payments with Stripe, and visualizations of battery management system info.",
-    date: "May 2024 - Present",
+    date: "May 2024 - June 2025",
     stack: ["React", "TypeScript", "PHP", "SQL"],
     image: [verogo_dashboardImage],
     link: [],
@@ -80,7 +121,7 @@ const projects = [
     name: "DP Dashboard",
     description:
       "A internal dashboard with data analytics and visualizations through the Google Analytics API for The Daily Pennsylvanian business department.",
-    date: "Jan 2024 - Present",
+    date: "Jan 2024 - Jan 2025",
     stack: ["React", "TypeScript", "Flask", "Python"],
     image: [dp_dashboardImage],
     link: [],
@@ -118,12 +159,21 @@ const projects = [
     image: [pennCourseMarketImage],
     link: [
       {
-        icon: <></>,
+        icon: <FaLink size={14} />,
         isIcon: false,
         href: "https://pennlabs-appfall24.onrender.com/",
-        name: "Website",
+        name: " Website",
       },
     ],
+  },
+  {
+    name: "Chess Game",
+    description:
+      "Fully functional chess game created with Java Swing GUI, as the final project for CIS 1200.",
+    date: "Dec 2023",
+    stack: ["Java"],
+    image: [chessGameImage],
+    link: [],
   },
   {
     name: "ScioVirtual Website",
@@ -160,7 +210,7 @@ const projects = [
   {
     name: "Ultrasound IOS App",
     description:
-      "Mobile app utilizing phone's gryoscope to simulate motion of the ultrasound transducer for the education of medical students.",
+      "Mobile app utilizing phone's gryoscope to simulate motion of the ultrasound transducer for the education of medical students. Presented poster about this at IAMSE Conference 2023.",
     date: "June 2022 - July 2023",
     stack: ["React Native", "Expo"],
     image: [ultrasoundAppImage],
@@ -287,12 +337,19 @@ export default function App() {
           <div className="pr-5">
             <h1 className="text-3xl font-bold pb-2">About Me</h1>
             <p className="indent-8 mb-5">
-              I'm a student studying Computer Science at the University of
-              Pennsylvania. On campus I'm involved in The Daily Pennsylvanian,
-              Penn Band, and Machine Learning Research@Penn. I enjoy exploring
+              I'm a student pursuing a Bachelors and Masters in Computer Science at the University of
+              Pennsylvania. On campus I'm involved in the Penn Band as Clarinetist, a member of the Penn Band Fanfare Honor Society, a CIS 5500 Databases TA, and an Engineering Orientation Peer Advisor. I enjoy exploring
               Philadelphia (SKOOL-kil river trail, Chinatown, Benjamin Franklin
               Parkway, Clark Park Farmer's Market), running, and cooking/eating.
             </p>
+            <p className="indent-8 mb-5">Currently, I'm working on a startup called <button
+              className=" hover:underline text-[#e92737]"
+              onClick={() => {
+                scroll("#BridgeCaER");
+              }}
+            >
+              BridgeCaER
+            </button> to help doctors and social workers better connect patients with resources.</p>
           </div>
           <img src={profilepic} alt="Profile picture" className="h-52 w-auto rounded" />
         </div>
@@ -306,10 +363,10 @@ export default function App() {
                   <p>{e.date}</p>
                 </div>
                 <div className="flex justify-between">
-                <p className="italic">{e.role}</p>
-                <p className="italic">{e.location}</p>
+                  <p className="italic">{e.role}</p>
+                  <p className="italic">{e.location}</p>
                 </div>
-                  
+
                 {e.project && (
                   <button
                     className="text-gray-500 text-sm hover:text-gray-300"
